@@ -116,3 +116,14 @@ canvas {
 	margin: 0;
 	padding: 0;
 }
+
+.showgrid {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 100;
+	background-color: white;
+	border-radius: 15px;
+	box-shadow: rgba(128, 128, 128, 0.137) 0 0 15px 5px;
+	padding: 7px 14px;
+}
