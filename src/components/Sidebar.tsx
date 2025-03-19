@@ -24,8 +24,6 @@ const Sidebar: React.FC = observer(() => {
 		return color;
 	};
 
-	shapeStore.shapes.forEach(console.log);
-
 	const addShape = () => {
 		const newShape: Omit<IShape, 'id'> = {
 			type: shapeType,
@@ -64,9 +62,13 @@ const Sidebar: React.FC = observer(() => {
 						onClick={() => shapeStore.selectShape(shape.id)}
 					>
 						<div className='colors'>
-							{shape.colors.map((color) => {
+							{shape.colors.map((color, id) => {
 								return (
-									<div className='color' style={{ background: color }}></div>
+									<div
+										key={id}
+										className='color'
+										style={{ background: color }}
+									></div>
 								);
 							})}
 						</div>
