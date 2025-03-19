@@ -61,26 +61,27 @@ const Sidebar: React.FC = observer(() => {
 						}`}
 						onClick={() => shapeStore.selectShape(shape.id)}
 					>
-						<div className='colors'>
-							{shape.colors.map((color, id) => {
-								return (
-									<div
-										key={id}
-										className='color'
-										style={{ background: color }}
-									></div>
-								);
-							})}
+						<div className='wrapper row'>
+							<div className='colors'>
+								{shape.colors.map((color, id) => {
+									return (
+										<div
+											key={id}
+											className='color'
+											style={{ background: color }}
+										></div>
+									);
+								})}
+							</div>
+							<div className='wrapper col '>
+								<p className='shape__name'>{shape.id}</p>
+								<p className='shape__position'>
+									position: ({rounded(shape.position[0], 2)},{' '}
+									{rounded(shape.position[1], 2)},{' '}
+									{rounded(shape.position[2], 2)})
+								</p>
+							</div>
 						</div>
-						<div className='wrapper col '>
-							<p className='shape__name'>{shape.id}</p>
-							<p className='shape__position'>
-								position: ({rounded(shape.position[0], 2)},{' '}
-								{rounded(shape.position[1], 2)}, {rounded(shape.position[2], 2)}
-								)
-							</p>
-						</div>
-
 						<Button
 							className='butt rembutt'
 							size='small'

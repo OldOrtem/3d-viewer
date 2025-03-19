@@ -7,7 +7,9 @@ html,
 	height: 100%;
 	overflow: hidden;
 }
-
+* {
+	box-sizing: border-box;
+}
 .container {
 	display: flex;
 	width: 100%;
@@ -71,20 +73,19 @@ html,
 			display: flex;
 			flex-flow: row wrap;
 			height: 100%;
-			width: 75px;
+			width: 76px;
 			border-top: 0.5px black solid;
 			border-left: 0.5px black solid;
 			.color {
-				height: 24px;
+				height: 25px;
 
-				width: 24px;
+				width: 25px;
 				border-right: 0.5px black solid;
 				border-bottom: 0.5px black solid;
 			}
 		}
 		.rembutt {
 			align-self: center;
-			margin-right: 20px;
 		}
 	}
 
